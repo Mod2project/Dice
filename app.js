@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const hbs = require("hbs");
 
-const app = express()
+const app = express();
 
 app.set("view engine", "hbs");
 app.set("views", `${__direname}/views`);
