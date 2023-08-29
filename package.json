@@ -1,0 +1,27 @@
+{
+  "name": "dice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e hbs,js,css app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mod2project/Dice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mod2project/Dice/issues"
+  },
+  "homepage": "https://github.com/Mod2project/Dice#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^7.4.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
