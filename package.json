@@ -1,7 +1,7 @@
 {
   "name": "dice",
   "version": "1.0.0",
-  "description": "",
+  "description": "Is an APP to events",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/Mod2project/Dice#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.18.2",
     "hbs": "^4.2.0",
-    "mongoose": "^7.4.5",
+    "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
   }
