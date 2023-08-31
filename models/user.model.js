@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require('bcrypt')
 const Schema = mongoose.Schema
 
-const saltRounds = 10;
+const WORK_FACTOR = 10;
 
 const EMAIL_PATTERN = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -62,7 +62,7 @@ userSchema.pre('save', function(next){
     const user = this;
 
     if (user.isModified('password')){
-        bcrypt.hash(user.password, saltRounds)
+        bcrypt.hash(user.password, WORK_FACTOR)
         .then((hash) => {
             user.password = hash;
             next();
@@ -72,6 +72,8 @@ userSchema.pre('save', function(next){
         next();
     }
 }) 
+
+//Método de mongoose para comparar una contraseña sin estar hachearla
 
 userSchema.methods.checkPassword = function(password) {
     const user = this;
