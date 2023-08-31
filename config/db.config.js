@@ -1,8 +1,9 @@
 const mongoose = require ('mongoose');
+require("dotenv").config()
 
 
 mongoose
-    .connect("mongodb+srv://neboafresco:DiceProject2023@dice.ok0mbi7.mongodb.net/") //77.27.48.243/32 
+    .connect(process.env.NEBOA_DB) 
     .then(()=> {
         console.log('conected to database')
     })
