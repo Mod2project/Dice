@@ -1,5 +1,5 @@
 const express = require("express");
-const morgan = require("morgan");
+const logger = require("morgan");
 const hbs = require("hbs");
 const mongoose = require('mongoose')
 
