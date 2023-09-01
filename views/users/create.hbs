@@ -1,5 +1,7 @@
+<div class="container">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
 <div class="card" style="width: 18rem;">
-  <div class="card-header">
+  <div class="card-header" style="text-align: center;">
     <h1>Register</h1>
   </div>
 
@@ -46,8 +48,13 @@
             {{! to show invalid message in red }}
             {{#if errors.password}}<div class="invalid-feedback">{{ errors.password }}</div>{{/if}}
         </div>   
-
     </div>
 
+    {{! ADD REGISTER BUTTON}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+
     </form>
+  </div>
+ </div>
+
   </div>

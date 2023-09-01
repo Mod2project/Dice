@@ -1,0 +1,34 @@
+<div class="container">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+<div class="card" style="width: 18rem;">
+    <div class="class-header" style="text-align: center;">
+        <h1>Log in</h1>
+    </div>
+
+    <div class="class-body">
+        <form action="/log in" method="post">
+
+        {{! USERNAME }}
+         <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-tag"></i></span>
+            <input type="text" name="username" class="form-control {{#if errors.username}}is-invalid{{/if}}" placeholder="Username" value="{{ user.username }}">
+            {{! to show invalid message in red }}
+            {{#if errors.username}}<div class="invalid-feedback">{{ errors.username }}</div>{{/if}}
+        </div> 
+
+        {{! PASSWORD }}    
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" value="{{ user.password }}">
+            {{! to show invalid message in red }}
+            {{#if errors.password}}<div class="invalid-feedback">{{ errors.password }}</div>{{/if}}
+        </div>  
+
+        {{! ADD LOG IN BUTTON}}
+        <button type="submit" class="btn btn-primary">Log in</button>
+
+        </form>
+    </div>
+    </div>
+    </div>
+</div>
