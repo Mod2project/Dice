@@ -1,1 +1,53 @@
-hola 
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <h1>Register</h1>
+  </div>
+
+  <div class="card-body">
+    <form action="/create" method="post">
+    
+    {{! NAME }}
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            <input type="text" name="name" class="form-control {{#if errors.name}}is-invalid{{/if}}" placeholder="Name" aria-label="Name" value="{{ user.name }}">
+            {{! to show the invalid message in red }}
+            {{#if errors.name}}<div class="invalid-feedback">{{ errors.name }}</div>{{/if}} 
+        </div>
+
+   {{! EMAIL }}    
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+            <input type="email" name="mail" class="form-control {{#if errors.mail}}is-invalid{{/if}}" placeholder="Email" value="{{ user.mail }}">
+            {{! to show invalid message in red }}
+            {{#if errors.mail}}<div class="invalid-feedback">{{ errors.mail }}</div>{{/if}}
+        </div>
+   
+
+    {{! USERNAME }}
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-tag"></i></span>
+            <input type="text" name="username" class="form-control {{#if errors.username}}is-invalid{{/if}}" placeholder="Username" value="{{ user.username }}">
+            {{! to show invalid message in red }}
+            {{#if errors.username}}<div class="invalid-feedback">{{ errors.username }}</div>{{/if}}
+        </div>  
+
+     {{! BIRTHDAY }}    
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+            <input type="date" name="birthday" class="form-control {{#if errors.birthday}}is-invalid{{/if}}" placeholder="Date of Birth" value="{{ user.birthday }}">
+            {{! to show invalid message in red }}
+            {{#if errors.birthday}}<div class="invalid-feedback">{{ errors.birthday }}</div>{{/if}}
+        </div>      
+    
+    {{! PASSWORD }}    
+        <div class="input-group mb-1">
+            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" value="{{ user.password }}">
+            {{! to show invalid message in red }}
+            {{#if errors.password}}<div class="invalid-feedback">{{ errors.password }}</div>{{/if}}
+        </div>   
+
+    </div>
+
+    </form>
+  </div>
