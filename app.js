@@ -21,7 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 /** Congiure static files */
 app.use(express.static("public"));
 
-const {session} = require ('./config/session.config')
+const sessionConfig = require ('./config/session.config')
+app.use (sessionConfig.session);
+app.use(sessionConfig.loadSessionUser);
 
 
 const router = require("./config/routes.config");

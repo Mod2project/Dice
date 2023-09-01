@@ -42,11 +42,11 @@
     {{! PASSWORD }}    
         <div class="input-group mb-1">
             <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-            <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" value="{{ user.password }}">
+            <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" >  {{!he quitado el value porque sino se autocompletaba la contraseña }}
             {{! to show invalid message in red }}
             {{#if errors.password}}<div class="invalid-feedback">{{ errors.password }}</div>{{/if}}
         </div>   
-
+     <button type="submit" class="btn btn-success">Crear</button>
     </div>
 
     </form>

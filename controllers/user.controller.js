@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const mongoose = require('mongoose')
 
 
+
 module.exports.create = (req, res, next) => {
     res.render("users/create")
 }
@@ -21,7 +22,6 @@ module.exports.doCreate = (req, res, next) => {
       } else {
         return User.create(req.body)
           .then(() => {
-            req.flash('data', JSON.stringify({ info: 'Please login in'}));
             res.redirect('/login')
           })
       }
@@ -69,10 +69,13 @@ module.exports.doLogin = (req, res, next) => {
     }
   })
   .catch((error) => next(error))
+}; 
+
+
+
+module.exports.detail = (req, res, next) => {
+
 }
-
-
-module.exports.detail = (req, res, next) => {}
 
 
 
