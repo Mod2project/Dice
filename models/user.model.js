@@ -31,7 +31,8 @@ const userSchema = new Schema ({
           }
     },
     birthdate : {
-        type : Date
+        type : Date,
+        //pending validate and validator
         //como hacer que solo los mayores de ¿¿16??? se puedan registrar??
     }, 
     password : {
