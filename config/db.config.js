@@ -3,7 +3,7 @@ require("dotenv").config()
 
 
 mongoose
-   .connect(process.env.MARIA_DB) 
+   .connect(process.env.MONGODB_URI) 
     .then(()=> {
         console.log('conected to database')
     })
