@@ -27,8 +27,9 @@ module.exports.doCreate = (req, res, next) => {
       }
     })
     .catch((error) => {
+      console.log(error)
         if(error instanceof mongoose.Error.ValidationError){
-          res.render('users/create', {users: req.body, error: error.errors})
+          res.render('users/create', {user: req.body, errors: error.errors})
         }else {
           next(error);
         }

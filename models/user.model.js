@@ -30,10 +30,15 @@ const userSchema = new Schema ({
             message: 'Invalid username, username can not contains white spaces'
           }
     },
-    birthdate : {
+    birthday: {
         type : Date,
-        //pending validate and validator
-        //como hacer que solo los mayores de ¿¿16??? se puedan registrar??
+        required: 'Birthday username is required',
+        validate: { 
+            validator: function(value) { 
+                return Math.floor(Math.floor((new Date() - value) / 1000 / 60 / 60 / 24 / 365)) >= 16;
+            }, 
+            message: 'Yoghurines are not allowed'
+        }
     }, 
     password : {
         type: String,

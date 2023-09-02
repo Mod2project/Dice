@@ -1,6 +1,7 @@
 const expressSession = require('express-session'); 
 const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
+const User = require('../models/user.model')
 
 module.exports.session = expressSession({
     //para firmar || no lo queremos saber porque si lo sabemos CARCEL

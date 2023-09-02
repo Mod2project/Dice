@@ -1,5 +1,58 @@
 [
     {
-        
+        "name": "Concierto MDA",
+        "artist":"MDA",
+        "date": "2023/12/01",
+        "hour": "20:30",
+        "capacity": 300,
+        "public":true,
+        "prize": 0,
+        "address": "C. de Barceló, 11, Local B, 28004 Madrid",
+        "description": "^^7^ ii : Lª tendenciª. Para mayores de 16 años (necesario traer DNI).Organizado por @cero.en.conducta.Sin requisitos de Covid-19 para ingresar",
+
+        "poster": "https://dice-media.imgix.net/attachments/2023-05-22/3fed091b-4e72-4de7-9340-3a10d612ca0a.jpg?rect=0%2C440%2C3517%2C3517&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+
+    },
+    {
+        "name": "Lagrima",
+        "artist":"jiulia v2v iosa",
+        "date": "02/09/2024",
+        "hour": "23:30",
+        "capacity": 204,
+        "public":true,
+        "prize": 0,
+        "address": "Calle San Dimas, 3, 28015 Madrid, Spain",
+        "description": "LAGRIMA regresa a SIROCO en su segunda edición. LAGRIMA es un colectivo cuya propuesta es fusionar diferentes disciplinas artísticas en la pista, ampliando el mundo clubbing, sin quitar ningún protagonismo a la música.",
+        "poster": "https://dice-media.imgix.net/attachments/2023-08-16/b98aef5a-8ad4-4e60-9047-c9aa2ebf4d44.jpg?rect=0%2C0%2C1600%2C1600&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+  
+    },
+    {
+        "name": "Jungle",
+        "artist":"Jungle",
+        "date": "28/10/2023",
+        "hour": "19:45",
+        "capacity": 1000,
+        "public":true,
+        "prize": 0,
+        "address": "C. de Matilde Hernández, s/n, 28025 Madrid, Spain",
+        "description": "MPORTANTE: Si sigues adelante con la compra aceptas expresamente las condiciones generales de Primavera Sound / ",
+        "poster": "https://dice-media.imgix.net/attachments/2023-08-16/b98aef5a-8ad4-4e60-9047-c9aa2ebf4d44.jpg?rect=0%2C0%2C1600%2C1600&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+  
+    },
+    {
+        "name": "DAB THE SKY",
+        "artist":"Dabin",
+        "date": "15/09/2023",
+        "hour": "19:45",
+        "capacity": 3000,
+        "public":true,
+        "prize": 0,
+        "address": "140 Stewart Ave, Brooklyn, NY 11237, USA",
+        "description": "A limited number of tables are available. To make a reservation please email reservations@avant-gardner.com. ",
+        "poster": "https://dice-media.imgix.net/attachments/2023-08-22/aebe297b-32b3-4858-bbf7-f38933e3e743.jpg?rect=0%2C0%2C1080%2C1080&auto=format%2Ccompress&q=40&w=328&fit=max&dpr=2"
+  
     }
-]
+
+    ]
+
+    

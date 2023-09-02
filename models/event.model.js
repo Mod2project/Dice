@@ -11,8 +11,20 @@ const eventSchema = new Schema ({
         required: "Artist is required"
     },
     date: {
-        type: Date,
-        required: "Date is required"
+        type: Date
+     }, 
+     
+     
+    hour: {
+        type: String,
+         validate: {
+          validator: function (value) {
+            return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
+           },
+          message: 'Please insert hour in format HH:MM',
+         },
+        required: "hour is required",
+        
     },
     capacity: {
         type : Number,
@@ -40,4 +52,8 @@ const eventSchema = new Schema ({
         required: "Poster is mandatory"
     }
 
-})
+});
+
+const Event = mongoose.model ('Event', eventSchema) ;
+
+module.exports = Event
