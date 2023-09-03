@@ -2,7 +2,7 @@
     {
         "name": "Concierto MDA",
         "artist":"MDA",
-        "date": "2023/12/01",
+        "date": "2024-09-02",
         "hour": "20:30",
         "capacity": 300,
         "public":true,
@@ -16,7 +16,7 @@
     {
         "name": "Lagrima",
         "artist":"jiulia v2v iosa",
-        "date": "02/09/2024",
+        "date": "2024-09-04",
         "hour": "23:30",
         "capacity": 204,
         "public":true,
@@ -29,7 +29,7 @@
     {
         "name": "Jungle",
         "artist":"Jungle",
-        "date": "28/10/2023",
+        "date": "2024-09-01",
         "hour": "19:45",
         "capacity": 1000,
         "public":true,
@@ -42,7 +42,7 @@
     {
         "name": "DAB THE SKY",
         "artist":"Dabin",
-        "date": "15/09/2023",
+        "date": "2024-09-06",
         "hour": "19:45",
         "capacity": 3000,
         "public":true,
