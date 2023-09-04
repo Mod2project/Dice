@@ -59,7 +59,7 @@ module.exports.doLogin = (req, res, next) => {
      .then((match) => {
         if(match) {
           req.session.userId = user.id;
-          res.redirect('/detail')
+          res.redirect('/profile/:id')
         }else {
          renderInvalidUsername();
         }
@@ -75,8 +75,9 @@ module.exports.doLogin = (req, res, next) => {
 
 
 module.exports.detail = (req, res, next) => {
-
+  res.render('users/detail', { user: req.user })
 }
+
 
 
 
