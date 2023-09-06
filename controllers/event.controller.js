@@ -10,8 +10,11 @@ module.exports.list = (req, res, next) => {
   }
   
   module.exports.detail = (req, res, next) => {
+    console.log(req.params.id)
     Event.findById(req.params.id)
+      .populate("users")
       .then((event) => {
+        console.log(event)
         res.render("events/detail", { event });
       })
       .catch(next);

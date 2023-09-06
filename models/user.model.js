@@ -58,7 +58,8 @@ const userSchema = new Schema ({
     city: {
         type : String
         //coordenadas
-    }    
+    },
+    events: [{type: mongoose.Schema.Types.ObjectId, ref: "Event"}]
 },
 {
     timestamps: true,

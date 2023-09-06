@@ -50,9 +50,18 @@ const eventSchema = new Schema ({
     poster: {
         type: String,
         required: "Poster is mandatory"
-    }
+    },
 
 });
+
+eventSchema.virtual("users", {
+        ref: "User",
+        localField: "_id",
+        foreignField: "events"
+});
+
+
+
 
 const Event = mongoose.model ('Event', eventSchema) ;
 
