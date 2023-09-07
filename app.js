@@ -14,12 +14,12 @@ app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
 
 app.use(logger('dev'))
-
+app.use(express.static(`${__dirname}/public`));
 /** Support req.body **/
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 /** Congiure static files */
-app.use(express.static("public"));
+
 
 const sessionConfig = require ('./config/session.config')
 app.use (sessionConfig.session);
