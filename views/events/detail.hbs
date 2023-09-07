@@ -5,9 +5,8 @@
       <div class="card-body">
         <h5 class="card-title">{{event.name}}</h5>
       </div>
-      <form action="/events/:id" method="/post">
-      <input type="text" name="{{event.name}}" class="input-card"> {{! poner luego etiqueta hidden con el css}}
-      <button type="submit" class="btn btn-success">submit</button>
+      <form action="/events/{{event.id}}" method="post">
+        <button type="submit" class="btn btn-success">Apuntame!</button>
       </form>
     </div>
   </div>
