@@ -59,11 +59,17 @@ const userSchema = new Schema ({
         type : String
         //coordenadas
     },
-    events: [{type: mongoose.Schema.Types.ObjectId, ref: "Event"}]
 },
 {
     timestamps: true,
 })
+
+userSchema.virtual("events", {
+    ref: "Event",
+    localField: "_id",
+    foreignField: "users"
+})
+
 
 userSchema.pre('save', function(next){
     const user = this;
