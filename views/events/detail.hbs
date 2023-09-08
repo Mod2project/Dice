@@ -1,13 +1,15 @@
 <div class="row justify-content-center">
   <div class="col-12 col-md-3 mb-2">
     <div class="card">
-      <img src={{event.poster}} class="card-img-top" alt={{event.name}}>
+      <img src="{{event.poster}}" class="card-img-top" alt="{{event.name}}">
       <div class="card-body">
         <h5 class="card-title">{{event.name}}</h5>
       </div>
+      {{#if req.user}}
       <form action="/events/{{event.id}}" method="post">
-        <button type="submit" class="btn btn-success">Apuntame!</button>
+        <button type="submit" class="btn btn-success">¡Apúntame!</button>
       </form>
+      {{/if}}
     </div>
   </div>
- </div>
+</div>

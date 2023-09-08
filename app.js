@@ -12,6 +12,10 @@ const app = express();
 
 app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
+//no soy capaz de meterlo en un hbs.config.js
+hbs.registerPartials(__dirname + "/views/partials")
+
+
 
 app.use(logger('dev'))
 app.use(express.static(`${__dirname}/public`));
@@ -19,6 +23,9 @@ app.use(express.static(`${__dirname}/public`));
 app.use(express.urlencoded({ extended: false }));
 
 /** Congiure static files */
+
+
+  
 
 
 const sessionConfig = require ('./config/session.config')

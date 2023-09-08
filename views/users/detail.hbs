@@ -12,3 +12,9 @@
  <div>
     <h5>Next events</h5>
  </div>
+   <div class="col-12"><h3 class="fw-light mb-0"> </h3><hr class="mb-3"></div>
+  {{#each user.events as |event|}}
+    <div class="col-12">
+      {{event.name}}
+    </div>
+  {{/each}}
