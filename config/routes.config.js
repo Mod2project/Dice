@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const users = require("../controllers/user.controller");
-const events = require("../controllers/event.controller")
-const secure = require("../middlewares/secure.middleware")
+const events = require("../controllers/event.controller");
+const secure = require("../middlewares/secure.middleware");
+const upload = require("../config/multer.config");
 
 //users routes
 router.get("/create", users.create);
@@ -10,13 +11,22 @@ router.post("/create", users.doCreate);
 router.get("/profile", secure.isLogged, users.detail);
 router.get("/login", users.login);
 router.post("/login", users.doLogin);
-router.get("/logout", user.logout )
+router.get("/logout", users.logout )
 
 //events routes
+router.get("/events/create", events.create);
+router.post(
+    "/events/create",
+    secure.isLogged,
+    upload.single("poster"),
+    events.doCreate);
 router.get("/events", events.list);
 router.get("/events/:id", events.detail);
+router.get("/events/:id/edit", events.edit);
+router.post("/events/:id", events.doEdit);
 router.post("/events/:id", events.join);
 router.get("/search", events.search)
+
 //search routes
 router.get("/", (req,res) => res.redirect ("/events"));
 
