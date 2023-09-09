@@ -4,11 +4,14 @@
       <img src="{{event.poster}}" class="card-img-top" alt="{{event.name}}">
       <div class="card-body">
         <h5 class="card-title">{{event.name}}</h5>
+        {{#if currentUser}}
+        <form action="/events/{{event.id}}/edit" method="get" >
+          <a href="/events/{{event._id}}/edit" class="btn btn-outline-warning">Edit</a>
+        </form>
       </div>
-      {{#if currentUser}}
-      <form action="/events/{{event.id}}" method="post">
-        <button type="submit" class="btn btn-success">¡Apúntame!</button>
-      </form>
+        <form action="/events/{{event.id}}" method="post">
+          <button type="submit" class="btn btn-outline-warning mx-3 mb-3">JOIN</button>
+         </form>
       {{/if}}
     </div>
   </div>

@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-3 mb-2">
+        <div class="class-header" style="text-align: center;">
+            <h2>Create an event</h2>   
+                <div class="card-body">
+                    <form action="/events/create" method="post" enctype="multipart/form-data">
+                        <div class="input-group mb-1">
+                            <input type="text" name="name" class="form-control" placeholder="Name" value="{{ event.name }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="text" name="artist" class="form-control" placeholder="Artist" value="{{ event.artist }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="date" name="date" class="form-control" placeholder="Date" value="{{ event.date }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="text" name="hour" class="form-control" placeholder="Hour" value="{{ event.hour }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="number" name="capacity" class="form-control" placeholder="Capacity" value="{{ event.capacity }}">
+                        </div>
+                        <select class="form-select" name="public" type="boolean">
+                            <option selected>Is Public</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <div class="input-group mb-1">
+                            <input type="number" name="prize" class="form-control" placeholder="Prize" value="{{ event.prize }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="text" name="address" class="form-control" placeholder="Address" value="{{ event.address }}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <textarea type="text" name="description" class="form-control" placeholder="Description">{{ event.description }}</textarea>
+                        </div>
+                        {{!ver clase de hoy para saber como se sube la imagen }}
+                        <div class="input-group mb-1">
+                            <input type="file" name="poster" class="form-control" placeholder="Poster"  value="{{ event.poster }}">
+                        </div>
+                            <button type="submit" class="btn btn-outline-warning">Create</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
