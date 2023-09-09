@@ -74,9 +74,11 @@ module.exports.doLogin = (req, res, next) => {
 }; 
 
 module.exports.logout = (req, res, next) =>{
-  User.find(req.user){
-    
-  }
+  User.find(req.user)
+    if (User) {
+      req.session.destroy()
+      res.redirect("/login")
+    }
 }
 
 module.exports.detail = (req, res, next) => {
