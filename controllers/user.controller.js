@@ -52,6 +52,7 @@ module.exports.doLogin = (req, res, next) => {
     })
   }
 
+
   User.findOne({username: req.body.username})
   .then((user)=>{
     if (user) { 
@@ -72,7 +73,11 @@ module.exports.doLogin = (req, res, next) => {
   .catch((error) => next(error))
 }; 
 
-
+module.exports.logout = (req, res, next) =>{
+  User.find(req.user){
+    
+  }
+}
 
 module.exports.detail = (req, res, next) => {
   res.render('users/detail', { user: req.user })

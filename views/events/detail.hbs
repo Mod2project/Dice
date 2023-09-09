@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{event.name}}</h5>
       </div>
-      {{#if req.user}}
+      {{#if currentUser}}
       <form action="/events/{{event.id}}" method="post">
         <button type="submit" class="btn btn-success">¡Apúntame!</button>
       </form>

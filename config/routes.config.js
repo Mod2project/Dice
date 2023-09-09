@@ -10,13 +10,13 @@ router.post("/create", users.doCreate);
 router.get("/profile", secure.isLogged, users.detail);
 router.get("/login", users.login);
 router.post("/login", users.doLogin);
-router.get("/search", events.search)
+router.get("/logout", user.logout )
 
 //events routes
 router.get("/events", events.list);
 router.get("/events/:id", events.detail);
 router.post("/events/:id", events.join);
-
+router.get("/search", events.search)
 //search routes
 router.get("/", (req,res) => res.redirect ("/events"));
 

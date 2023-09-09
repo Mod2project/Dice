@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 
 //configuración Database
 require("./config/db.config")
-
+require('./config/hbs.config')
 const app = express();
 
 app.set("view engine", "hbs");
@@ -15,14 +15,14 @@ app.set("views", `${__dirname}/views`);
 //no soy capaz de meterlo en un hbs.config.js
 hbs.registerPartials(__dirname + "/views/partials")
 
+  
+
 
 
 app.use(logger('dev'))
 app.use(express.static(`${__dirname}/public`));
 /** Support req.body **/
 app.use(express.urlencoded({ extended: false }));
-
-/** Congiure static files */
 
 
   
@@ -32,6 +32,11 @@ const sessionConfig = require ('./config/session.config')
 app.use (sessionConfig.session);
 app.use(sessionConfig.loadSessionUser);
 
+
+app.use((req, res, next) => {
+    res.locals.navigationPath = req.path;
+    next();
+  })
 
 const router = require("./config/routes.config");
 app.use('/', router);
