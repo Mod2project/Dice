@@ -1,18 +1,41 @@
-<div class="row justify-content-center">
-  <div class="col-12 col-md-3 mb-2">
-    <div class="card">
-      <img src="{{event.poster}}" class="card-img-top" alt="{{event.name}}">
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-5 ">
+    <div class="card"  >
+      <img src="{{event.poster}}" class="card-img-top-detail" alt="{{event.name}}">
       <div class="card-body">
-        <h5 class="card-title">{{event.name}}</h5>
+        <div class = "button-card">
         {{#if currentUser}}
+      <div>
         <form action="/events/{{event.id}}/edit" method="get" >
-          <a href="/events/{{event._id}}/edit" class="btn btn-outline-warning">Edit</a>
-        </form>
+          <a href="/events/{{event._id}}/edit" class="btn btn-outline-light mx-1 mb-3">Edit</a>
       </div>
-        <form action="/events/{{event.id}}" method="post">
-          <button type="submit" class="btn btn-outline-warning mx-3 mb-3">JOIN</button>
-         </form>
+
+       <div>
+        <form method="post" action="/events/{{event.id}}/delete">
+          <button type = "submit" class="btn btn-outline-light mx-1 mb-3" href=>delete</button>
+        </form>
+      </div>  
+     </div>
       {{/if}}
+    </div>
+ </div>
+</div>
+<div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title">{{event.name}}</h1>
+        <h5 class="card-text">{{event.artist}}</h5>
+        <div class="date-hour">
+          <p>{{prettyDate event.date}}, {{event.hour}}</p>
+        </div>
+        <div>
+        <form method="post" action="/events/{{event.id}}" >
+          <button type="submit" class="btn btn-outline-warning mx-1 mb-3 ">JOIN</button>
+         </form>
+      </div> 
+      <h6>{{event.description}}</h6>
+      </div>
+
     </div>
   </div>
 </div>

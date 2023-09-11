@@ -26,6 +26,7 @@ router.get("/events/:id/edit", events.edit);
 router.post("/events/:id", events.doEdit);
 router.post("/events/:id", events.join);
 router.get("/search", events.search)
+router.post("/events/:id/delete", events.delete);
 
 //search routes
 router.get("/", (req,res) => res.redirect ("/events"));

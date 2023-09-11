@@ -1,10 +1,57 @@
-.card-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 10px;
+
+ body {
+   background-color: black;
+  
+ }
+ h6{
+   font-weight: 200;
  }
 
- .card-title {
-    margin: 0;
+ h1 {
+   font-size: 80px;
  }
+
+ .img-list {
+   border-radius: 10px;
+ }
+
+ .card {
+   background-color: black;
+   padding-top: 50px;
+   padding-left: 10px;
+   padding-right: 10px;
+   
+ }
+
+ .card-body {
+   background-color: black;
+   color: antiquewhite;
+   justify-items: left;
+   display: inline-block;
+   
+
+ }
+
+ .card-image-top {
+   border-radius: 20px;
+ }
+
+ .button-card {
+   display: flex;
+   flex-direction:  row;
+   justify-content: center;
+   background-color: black;
+ }
+
+.card-img-top-detail {
+   size: 10px;
+   border-radius: 20px;
+}
+
+.date-hour {
+   display: flex;
+   flex-direction: row;
+   font-weight: 500;
+   color:green;
+  font-size: 20px;
+}

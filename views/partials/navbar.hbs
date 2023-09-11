@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dice</a>
+    <a class="navbar-brand" href="/events">
+      <img src="/images/DICE_logo_2022.svg.png" alt="Dicee" width="50" height="24">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +16,7 @@
         {{#if currentUser}}
           <li class="nav-item"><a class="nav-link {{navActive navigationPath '/profile'}}" aria-current="page" href="/profile">{{ currentUser.name}}</a></li>
         {{else}}
-          <li class="nav-item"><a class="nav-link {{navActive navigationPath '/register'}}" aria-current="page" href="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link {{navActive navigationPath '/register'}}" aria-current="page" href="/create">Register</a></li>
           <li class="nav-item"><a class="nav-link {{navActive navigationPath '/login'}}" aria-current="page" href="/login">Login</a></li>
         {{/if}}
       </ul>

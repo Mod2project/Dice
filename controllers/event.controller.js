@@ -101,3 +101,11 @@ module.exports.search = async (req, res, next) =>{
     res.status(500).json({ error: 'Error al buscar eventos' });
   }
 }
+
+module.exports.delete = (req, res, next) => {
+  Event.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.redirect("/events");
+    })
+    .catch(next);
+};

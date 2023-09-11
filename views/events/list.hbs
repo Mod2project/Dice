@@ -1,12 +1,13 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center pt-3 ps-5 pe-5 ">
+  
   {{#each events as |event|}}
     <div class="col-12 col-md-3 mb-2">
       <div class="card">
-        <img src="{{event.poster}}" class="card-img-top" alt="avatar-photo">
+        <img src="{{event.poster}}" class="img-list" alt="avatar-photo">
         <div class="card-body">
-          <h5 class="card-title">{{event.name}}</h5>
-          <p class="card-text-artist">{{event.artist}}</p>
-          <p class="card-text-date">{{event.date}}</p>
+          <h3 class="card-title">{{event.name}}</h3>
+          <h6 class="card-text-artist">{{event.artist}}</h6>
+          <p class="card-text-date">{{prettyDate event.date}}</p>
           <a href="/events/{{event._id}}" class="btn btn-outline-warning">Detail</a>
         </div>
       </div>
