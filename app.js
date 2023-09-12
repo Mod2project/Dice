@@ -2,7 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const hbs = require("hbs");
 const mongoose = require('mongoose')
-
+const stripe = require('stripe')
 
 
 //configuración Database

@@ -6,15 +6,16 @@
         <div class = "button-card">
         {{#if currentUser}}
       <div>
-        <form action="/events/{{event.id}}/edit" method="get" >
-          <a href="/events/{{event._id}}/edit" class="btn btn-outline-light mx-1 mb-3">Edit</a>
-      </div>
-
-       <div>
         <form method="post" action="/events/{{event.id}}/delete">
-          <button type = "submit" class="btn btn-outline-light mx-1 mb-3" href=>delete</button>
+          <button type = "submit" class="btn btn-outline-light mx-1 mb-3" href="">delete</button>
         </form>
       </div>  
+
+      <div>
+        <form action="/events/{{event.id}}/edit" method="get" >
+          <a href="/events/{{event._id}}/edit" class="btn btn-outline-light mx-1 mb-3">Edit</a>
+        </form>
+      </div>
      </div>
       {{/if}}
     </div>
@@ -28,9 +29,12 @@
         <div class="date-hour">
           <p>{{prettyDate event.date}}, {{event.hour}}</p>
         </div>
+        <div class="prize-detail">
+          <p>{{event.prize}}</p>
+        </div>
         <div>
         <form method="post" action="/events/{{event.id}}" >
-          <button type="submit" class="btn btn-outline-warning mx-1 mb-3 ">JOIN</button>
+          <button type="submit" class="btn btn-outline-warning mt-3 mb-3 mx-2">JOIN</button>
          </form>
       </div> 
       <h6>{{event.description}}</h6>

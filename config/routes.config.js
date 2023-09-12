@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const users = require("../controllers/user.controller");
 const events = require("../controllers/event.controller");
+const payment = require("../controllers/payment.controller");
 const secure = require("../middlewares/secure.middleware");
 const upload = require("../config/multer.config");
 
@@ -30,5 +31,11 @@ router.post("/events/:id/delete", events.delete);
 
 //search routes
 router.get("/", (req,res) => res.redirect ("/events"));
+
+//payment routes
+router.get('/create-checkout-session', payment.createCheckout)
+router.get('/success', payment.success)
+router.get('/cancel', payment.cancel)
+
 
 module.exports = router; 
