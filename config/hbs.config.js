@@ -10,3 +10,11 @@ hbs.registerHelper('navActive', (navigationPath, expectedPath, options) => {
 hbs.registerHelper("prettyDate", (date) => {
   return date.toLocaleDateString("es-ES", {});
 });
+
+hbs.registerHelper('isPublic', function (event, options) {
+  if (event.public) {
+      return options.fn(this);
+  } else{
+      return options.inverse(this);
+  }
+});

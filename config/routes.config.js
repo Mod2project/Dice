@@ -25,7 +25,8 @@ router.get("/events", events.list);
 router.get("/events/:id", events.detail);
 router.get("/events/:id/edit", events.edit);
 router.post("/events/:id", events.doEdit);
-router.post("/events/:id", events.join);
+router.post("/events/:id/join", events.join);
+router.get("/events/:id/success-payment", events.paymentSuccessCb);
 router.get("/search", events.search)
 router.post("/events/:id/delete", events.delete);
 

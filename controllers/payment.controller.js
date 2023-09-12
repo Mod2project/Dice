@@ -1,8 +1,4 @@
-const Stripe = require('stripe');
-require("dotenv").config()
 
-
-const stripe = new Stripe (process.env.STRIPE_URI)
 
 module.exports.createCheckout = async (req, res, next) =>{
    
@@ -19,8 +15,6 @@ module.exports.createCheckout = async (req, res, next) =>{
   success_url: 'https://localhost:3000/success',
   cancel_url: 'https://localhost:3000/cancel',
 });
-return res.json(sessionStripe)
-
 
 res.redirect(303, session.url);
 }

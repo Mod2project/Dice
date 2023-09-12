@@ -5,8 +5,8 @@
         "date": "2024-09-02",
         "hour": "20:30",
         "capacity": 300,
-        "public":true,
-        "prize": 0,
+        "public":false,
+        "prize": 15,
         "address": "C. de Barceló, 11, Local B, 28004 Madrid",
         "description": "^^7^ ii : Lª tendenciª. Para mayores de 16 años (necesario traer DNI).Organizado por @cero.en.conducta.Sin requisitos de Covid-19 para ingresar",
 
@@ -45,8 +45,8 @@
         "date": "2024-09-06",
         "hour": "19:45",
         "capacity": 3000,
-        "public":true,
-        "prize": 0,
+        "public":false,
+        "prize": 30,
         "address": "140 Stewart Ave, Brooklyn, NY 11237, USA",
         "description": "A limited number of tables are available. To make a reservation please email reservations@avant-gardner.com. ",
         "poster": "https://dice-media.imgix.net/attachments/2023-08-22/aebe297b-32b3-4858-bbf7-f38933e3e743.jpg?rect=0%2C0%2C1080%2C1080&auto=format%2Ccompress&q=40&w=328&fit=max&dpr=2"

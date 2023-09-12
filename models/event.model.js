@@ -32,7 +32,7 @@ const eventSchema = new Schema ({
     },
     public:{
         type: Boolean,
-        default: false
+        default: true,
     },
     prize: {
         type: Number,
