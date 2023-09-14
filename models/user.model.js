@@ -59,15 +59,19 @@ const userSchema = new Schema ({
         type : String
         //coordenadas
     },
+    admin : {
+        type : Boolean,
+        default: false
+},
 },
 {
     timestamps: true,
 })
 
-userSchema.virtual("events", {
-    ref: "Event",
+userSchema.virtual("tickets", {
+    ref: "Ticket",
     localField: "_id",
-    foreignField: "users"
+    foreignField: "user"
 })
 
 

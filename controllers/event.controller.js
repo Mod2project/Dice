@@ -1,6 +1,7 @@
 const Event = require("../models/event.model");
 const mongoose = require('mongoose');
 const stripe = require('../config/stripe.config')
+const Ticket = require("../models/ticket.model");
 
 module.exports.create = (req, res, next) => {
   res.render("events/create")
@@ -33,22 +34,11 @@ module.exports.list = (req, res, next) => {
 }
 
 module.exports.detail = (req, res, next) => {
-  console.log(req.params.id)
-  Event.findById(req.params.id)
-    .populate("users")
-    .then((event) => {
-
-      res.render("events/detail", { event });
-    })
-    .catch(next);
+  res.render("events/detail", { event: req.event });
 }
 
 module.exports.edit = (req, res, next) => {
-  Event.findById(req.params.id)
-    .then((event) => {
-      res.render("events/edit", { event })
-    })
-    .catch(next);
+  res.render("events/edit", { event: req.event })
 }
 
 module.exports.doEdit = (req, res, next) => {
@@ -71,46 +61,55 @@ module.exports.doEdit = (req, res, next) => {
 }
 
 module.exports.join = (req, res, next) => {
-  Event.findById(req.params.id)
-    .then(event => {
-      if (event) {
-        if (event.public) {
-          event.users.push(req.user.id)
-          return event.save()
-            .then(() => {
-              res.redirect('/events')
-            })
-        } else {
-          const priceID =  "{{event.prize}}"
-          return stripe.checkout.sessions.create({
-            mode: 'payment',
-            payment_method_types: ['card'],
-            line_items: [
-              {
-                price_data: {
-                  currency: "eur",
-                  product_data: {
-                    name: event.name,
-                  },
-                  unit_amount: event.prize * 100,
-                },
-                quantity: 1,
-              },
-            ],
-
-            success_url:`http://localhost:3000/events/${event.id}/success-payment` ,
-            cancel_url: `http://localhost:3000/events/${event.id}/cancel-payment`,
-          }).then((session)=> res.redirect(session.url))
-        }
-
+  const event = req.event
+  Ticket.findOne({ event: event.id, user: req.user.id })
+    .then((ticket) => {
+      if (ticket) {
+        res.redirect(`/events/${event.id}`)
+      } else if (event.public) {
+        return Ticket.create({ event: event.id, user: req.user.id })
+          .then(() => res.redirect(`/events/${event.id}`))
       } else {
-        res.redirect('/events')
+        return stripe.checkout.sessions.create({
+          mode: 'payment',
+          payment_method_types: ['card'],
+          line_items: [
+            {
+              price_data: {
+                currency: "eur",
+                product_data: {
+                  name: event.name,
+                },
+                unit_amount: event.prize * 100,
+              },
+              quantity: 1,
+            },
+          ],
+          success_url: `http://localhost:3000/events/${event.id}/success-payment`,
+          cancel_url: `http://localhost:3000/events/${event.id}/cancel-payment`,
+        }).then((session) => res.redirect(session.url))
       }
-    }).catch((error) => next(error))
+    })
+    .catch((error) => next(error))
 }
 
 module.exports.paymentSuccessCb = (req, res, next) => {
-  console.log(req.body)
+  const event = req.event
+  Ticket.findOne({ event: event.id, user: req.user.id })
+    .then((ticket) => {
+      if (ticket) {
+        res.redirect(`/events/${event.id}`)
+      } else {
+        return Ticket.create({ 
+          event: event.id, 
+          user: req.user.id, 
+          metadata: {
+            prize: event.prize,
+          }
+        }).then(() => res.redirect(`/events/${event.id}`))
+      } 
+    })
+    .catch((error) => next(error))
 }
 
 module.exports.search = async (req, res, next) => {
@@ -137,3 +136,4 @@ module.exports.delete = (req, res, next) => {
     })
     .catch(next);
 };
+

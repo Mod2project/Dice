@@ -7,9 +7,11 @@
         "capacity": 300,
         "public":false,
         "prize": 15,
+        "lat": 40.42723978551218, 
+        "lng": -3.6997315942523437,
         "address": "C. de Barceló, 11, Local B, 28004 Madrid",
         "description": "^^7^ ii : Lª tendenciª. Para mayores de 16 años (necesario traer DNI).Organizado por @cero.en.conducta.Sin requisitos de Covid-19 para ingresar",
-
+        "song": "https://open.spotify.com/embed/track/3nF4lXOd7muKDoU4VFjhuK?utm_source=generator",
         "poster": "https://dice-media.imgix.net/attachments/2023-05-22/3fed091b-4e72-4de7-9340-3a10d612ca0a.jpg?rect=0%2C440%2C3517%2C3517&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
 
     },
@@ -21,8 +23,11 @@
         "capacity": 204,
         "public":true,
         "prize": 0,
+        "lat": 40.38886610625587,
+        "lng": -3.735381195301011,
         "address": "Calle San Dimas, 3, 28015 Madrid, Spain",
         "description": "LAGRIMA regresa a SIROCO en su segunda edición. LAGRIMA es un colectivo cuya propuesta es fusionar diferentes disciplinas artísticas en la pista, ampliando el mundo clubbing, sin quitar ningún protagonismo a la música.",
+        "song": "https://open.spotify.com/embed/track/0Ftrkz2waaHcjKb4qYvLmz?utm_source=generator",
         "poster": "https://dice-media.imgix.net/attachments/2023-08-16/b98aef5a-8ad4-4e60-9047-c9aa2ebf4d44.jpg?rect=0%2C0%2C1600%2C1600&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
   
     },
@@ -34,9 +39,12 @@
         "capacity": 1000,
         "public":true,
         "prize": 0,
+        "lat": 40.38886610625587,
+        "lng": -3.735381195301011,
         "address": "C. de Matilde Hernández, s/n, 28025 Madrid, Spain",
         "description": "MPORTANTE: Si sigues adelante con la compra aceptas expresamente las condiciones generales de Primavera Sound / ",
-        "poster": "https://dice-media.imgix.net/attachments/2023-08-16/b98aef5a-8ad4-4e60-9047-c9aa2ebf4d44.jpg?rect=0%2C0%2C1600%2C1600&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+        "song":"https://open.spotify.com/embed/track/19kHhX6f6EfLU7rcO3RqjO?utm_source=generator&theme=0",
+        "poster": "https://dice-media.imgix.net/attachments/2023-04-04/fa5b8ee8-740d-4c74-99d8-25118c0133f1.jpg?rect=0%2C0%2C1501%2C1501&auto=format%2Ccompress&q=40&w=328&fit=max&dpr=2"
   
     },
     {
@@ -47,7 +55,10 @@
         "capacity": 3000,
         "public":false,
         "prize": 30,
-        "address": "140 Stewart Ave, Brooklyn, NY 11237, USA",
+        "lat": 40.71088025699085,
+        "lng": -73.92630747666306,
+        "address": "calle falsa 123",
+        "song":"https://open.spotify.com/embed/track/6AoG52kxfptY0QBQnjuQOe?utm_source=generator&theme=0",
         "description": "A limited number of tables are available. To make a reservation please email reservations@avant-gardner.com. ",
         "poster": "https://dice-media.imgix.net/attachments/2023-08-22/aebe297b-32b3-4858-bbf7-f38933e3e743.jpg?rect=0%2C0%2C1080%2C1080&auto=format%2Ccompress&q=40&w=328&fit=max&dpr=2"
   

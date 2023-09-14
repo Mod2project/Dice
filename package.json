@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Mod2project/Dice#readme",
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "bcrypt": "^5.1.1",
     "cloudinary": "^1.40.0",
     "connect-mongo": "^5.0.0",

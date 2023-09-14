@@ -15,14 +15,13 @@
  <div>
     <h5>Next events</h5>
  </div>
-   <div class="col-12"><h3 class="fw-light mb-0"> </h3><hr class="mb-5"></div>
-  {{#each user.events as |event|}}
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-5 mb-5">
-        <div class="card">
-          <img src="{{event.poster}}" class="card-img-top" alt="{{event.name}}">
+   <div class="row justify-content-center pt-3 ps-5 pe-5 ">
+  {{#each user.tickets as |ticket|}}
+    <div class="col-12 col-md-3 mb-2">
+      <div class="card">
+          <img src="{{ticket.event.poster}}" class="card-img-top" alt="{{ticket.event.name}}">
         <div class="card-body">
-          <h5 class="card-title">{{event.name}}</h5>
+          <h5 class="card-title">{{ticket.event.name}}</h5>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const stripe = require('stripe')
 
 
+
 //configuración Database
 require("./config/db.config")
 require('./config/hbs.config')
@@ -15,8 +16,12 @@ app.set("views", `${__dirname}/views`);
 //no soy capaz de meterlo en un hbs.config.js
 hbs.registerPartials(__dirname + "/views/partials")
 
-  
 
+//configuración google maps
+app.use((req,res,next) =>{
+    res.locals.googleKeyApi = process.env.GOOGLE_API_KEY;
+    next()
+})
 
 
 app.use(logger('dev'))

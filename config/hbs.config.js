@@ -18,3 +18,10 @@ hbs.registerHelper('isPublic', function (event, options) {
       return options.inverse(this);
   }
 });
+
+function initMap(lat, lng) {
+  let map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: lat, lng: lng },
+    zoom: 8
+  });
+}

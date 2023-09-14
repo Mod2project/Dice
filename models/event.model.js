@@ -39,10 +39,20 @@ const eventSchema = new Schema ({
         default: 0,
         min: [0, "Prize must be positive"]
     },
+    lat: {
+        type: Number,     
+    },
+    lng: {
+        type: Number,  
+    },
     address: {
         type: String,
         required: "Address is mandatory"
     },
+    song: {
+        type: String,
+    },
+
     description: {
         type: String,
         required: "Description is mandatory"
