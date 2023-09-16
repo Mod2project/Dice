@@ -2,6 +2,7 @@ const Event = require("../models/event.model");
 const mongoose = require('mongoose');
 const stripe = require('../config/stripe.config')
 const Ticket = require("../models/ticket.model");
+const QRCode = require("qrcode");
 
 module.exports.create = (req, res, next) => {
   res.render("events/create")
@@ -100,14 +101,18 @@ module.exports.paymentSuccessCb = (req, res, next) => {
       if (ticket) {
         res.redirect(`/events/${event.id}`)
       } else {
-        return Ticket.create({ 
-          event: event.id, 
-          user: req.user.id, 
-          metadata: {
-            prize: event.prize,
-          }
-        }).then(() => res.redirect(`/events/${event.id}`))
-      } 
+        return QRCode.toDataURL(`${event.id}-${req.user.id}`)
+          .then((qr) => {
+            return Ticket.create({
+              event: event.id,
+              user: req.user.id,
+              metadata: {
+                ticket: qr,
+                prize: event.prize,
+              }
+            })
+          }).then(() => res.redirect(`/events/${event.id}`))
+      }
     })
     .catch((error) => next(error))
 }
@@ -136,4 +141,3 @@ module.exports.delete = (req, res, next) => {
     })
     .catch(next);
 };
-
