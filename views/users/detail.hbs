@@ -1,32 +1,41 @@
-<div class="row justify-content-center">
-  <div class="col-12 col-md-3 mb-2">
-    <div class="card">
-      <img src={{user.avatar}} class="card-img-top" alt={{user.name}}>
-      <div class="card-body">
-        <h5 class="card-title">{{user.name}}</h5>
+<div class="">
+  <div class="profile-user">
+    <div>
+      <img src={{user.avatar}} class="profile-avatar" alt={{user.name}}>
+    </div>
+      <div class="profile-body">
+        <h3>#{{user.username}}</h3>
+        <h5>{{user.name}}</h5>
+        <p>{{prettyDate user.birthday}}</p>
         <form action="/logout" method="GET">
-        <button type="submit" class="btn btn-outline-warning mx-0.8 mb-3">Log out</button>
+        <button type="submit" class="btn-hover color-8">Log out</button>
         </form>
       </div>
-    </div>
   </div>
  </div>
 
- <div>
-    <h5>Next events</h5>
+ <div class = "title-event-profile">
+    <p>Next events<p>
  </div>
    <div class="row justify-content-center pt-3 ps-5 pe-5 ">
   {{#each user.tickets as |ticket|}}
+  
     <div class="col-12 col-md-3 mb-2">
-      <div class="card">
+      <div class="profile-event-card ">
           <img src="{{ticket.event.poster}}" class="card-img-top" alt="{{ticket.event.name}}">
-        <div class="card-body">
-          <h5 class="card-title">{{ticket.event.name}}</h5>
-          <div class="card-text">
-            <img src="{{ticket.metadata.ticket}}" alt="Qr ticket">
+        <div class="profile-event-card-body">
+          <div class="card-texxt-profile">
+          <h5>{{ticket.event.name}}</h5>
+          <p>{{prettyDate ticket.event.date}}</p>
           </div>
+          {{#if ticket.metadata.ticket}}
+          <div class="qr">
+            <img src="{{ticket.metadata.ticket}}" alt="ticket-imagen">
+          </div>
+          {{/if}}
         </div>
       </div>
     </div>
   {{/each}}
+
 
