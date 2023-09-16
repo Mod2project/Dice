@@ -19,6 +19,16 @@ hbs.registerHelper('isPublic', function (event, options) {
   }
 });
 
+hbs.registerHelper('isJoin', function (event, user, options) {
+  const events = user.tickets.map(ticket => ticket.event._id.toString());
+  console.log(typeof event)
+  if (events.includes(event)) {
+    return options.inverse(this);
+  } else{
+    return options.fn(this);  
+  }
+});
+
 function initMap(lat, lng) {
   let map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: lat, lng: lng },

@@ -4,7 +4,7 @@ const users = require("../controllers/user.controller");
 const events = require("../controllers/event.controller");
 const secure = require("../middlewares/secure.middleware");
 const upload = require("../config/multer.config");
-const eventMids = require("../middlewares/event.mid.js")
+const eventMids = require("../middlewares/event.mid.js");
 
 //users routes
 router.get("/create", users.create);
@@ -32,10 +32,6 @@ router.post("/events/:id/delete", events.delete);
 
 //search routes
 router.get("/", (req,res) => res.redirect ("/events"));
-
-//payment routes
-
-
 
 
 module.exports = router; 
