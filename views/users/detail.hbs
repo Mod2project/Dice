@@ -22,7 +22,11 @@
           <img src="{{ticket.event.poster}}" class="card-img-top" alt="{{ticket.event.name}}">
         <div class="card-body">
           <h5 class="card-title">{{ticket.event.name}}</h5>
+          <div class="card-text">
+            <img src="{{ticket.metadata.ticket}}" alt="Qr ticket">
+          </div>
         </div>
       </div>
     </div>
   {{/each}}
+

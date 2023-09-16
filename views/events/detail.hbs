@@ -33,17 +33,17 @@
           <h4>{{event.prize}} €</h4>
         </div>
         <div>
-
-          <form method="post" action="/events/{{event.id}}/join">
-            <button type="submit" class="btn btn-outline-warning mt-3 mb-3 mx-2">
-              {{#isPublic event}}
-              JOIN
-              {{else}}
-              BUY
-              {{/isPublic}}
-            </button>
-          </form>
-          
+          {{#isJoin event.id currentUser}}
+            <form method="post" action="/events/{{event.id}}/join">
+              <button type="submit" class="btn btn-outline-warning mt-3 mb-3 mx-2">
+                {{#isPublic event}}
+                  JOIN
+                {{else}}
+                  BUY
+                {{/isPublic}}            
+              </button>
+            </form>
+          {{/isJoin}}
         </div>
       </div>
      <iframe style="border-radius:12px" src="{{event.song}}" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -74,4 +74,9 @@
       </script>
     </div>
   </div>
+</div>
+<div>
+  {{#each event.users as |user|}}
+    <img src="{{user.avatar}}" alt="{{user.username}}" />
+  {{/each}}
 </div>
