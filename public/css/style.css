@@ -13,11 +13,25 @@
  }
  
 #map {
-  height: 100%;
+  height: 200px;
   opacity: 0.8;
- 
   border-radius: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
+
+.map-dir {
+  color: antiquewhite;
+  margin-left: 20px;
+}
+
+.maps-dir {
+  color:rgba(252, 252, 34, 0.896);
+  margin-left: 20px;
+  font-size: larger;
+  text-decoration: navajowhite;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -48,8 +62,6 @@ html, body {
    color: antiquewhite;
    justify-items: left;
    display: inline-block;
-   
-
  }
 
  .card-image-top {
@@ -59,7 +71,7 @@ html, body {
  .button-card {
    display: flex;
    flex-direction:  row;
-   justify-content: center;
+   justify-content: space-between;
    background-color: black;
  }
 
@@ -73,8 +85,8 @@ html, body {
    display: flex;
    flex-direction: row;
    font-weight: 500;
-   color:green;
-  font-size: 20px;
+   color:rgba(252, 252, 34, 0.896);
+   font-size: 25px;
 }
 
 .col-sm-5{
@@ -84,6 +96,39 @@ html, body {
 
 .prize-detail {
    font-size: 60;
+}
+
+.prize-card-container {
+  display: flex;
+  background-image: linear-gradient(to right, #30302f, #7f7f7e);
+  border-radius: 12px;
+  justify-content: space-between;
+  
+}
+
+.event-information {
+  color: antiquewhite;
+  margin-left: 20px;
+}
+
+.users-avatar {
+  border-radius: 80px;
+  margin-left: 20px;
+  width: 60px;
+  height: 60px;
+
+}
+
+.event-song {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid antiquewhite;
+  border-top: 2px solid antiquewhite;
+  height: 120px;
+  color: antiquewhite;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
 }
 
 .profile-avatar{
@@ -116,8 +161,6 @@ html, body {
 .profile-body h3{
  font-size: 100px;
 }
-
-
 
 .profile-event-card-body{
  
@@ -223,6 +266,19 @@ html, body {
     border: beige;
     border-width: 1px;
     border-style: solid;
+}
+
+.btn-personalize {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+ 
+  height: 45px;
+  text-align:center;
+  
+  background-size: 300% 100%;
 }
 
 

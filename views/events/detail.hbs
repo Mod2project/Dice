@@ -1,5 +1,5 @@
-<div class="row d-flex justify-content-center">
-  <div class="col-sm-5 ">
+<div class="event-detail row d-flex justify-content-center">
+  <div class="col-sm-5">
     <div class="card">
       <img src="{{event.poster}}" class="card-img-top-detail" alt="{{event.name}}">
       <div class="card-body">
@@ -7,17 +7,22 @@
           {{#if currentUser}}
           <div>
             <form method="post" action="/events/{{event.id}}/delete">
-              <button type="submit" class="btn btn-outline-light mx-1 mb-3" href="">delete</button>
+              <button type="submit" class="btn btn-ouline-light color-8 mx-1 mb-3" href="">DELETE</button>
             </form>
           </div>
 
           <div>
-            <form action="/events/{{event.id}}/edit" method="get">
-              <a href="/events/{{event._id}}/edit" class="btn btn-outline-light mx-1 mb-3">Edit</a>
+            <form action="/events/{{event.id}}/edit" method="get"> 
+              <a href="/events/{{event._id}}/edit" class="btn btn-ouline-light color-8 mx-1 mb-3">EDIT</a>
             </form>
           </div>
         </div>
         {{/if}}
+        <div>
+          {{#each event.users as |user|}}
+             <img src="{{user.avatar}}" alt="{{user.username}}" class="users-avatar" />
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
@@ -25,17 +30,22 @@
     <div class="card">
       <div class="card-body">
         <h1 class="card-title">{{event.name}}</h1>
-        <h5 class="card-text">{{event.artist}}</h5>
+        <h3 class="card-text">{{event.artist}}</h3>
         <div class="date-hour">
           <p>{{prettyDate event.date}}, {{event.hour}}</p>
         </div>
-        <div class="prize-detail">
-          <h4>{{event.prize}} €</h4>
+        <div class="event-address">
+        <i class="fa-solid fa-location-dot">  {{event.address}}  </i>
         </div>
+        <div class="prize-card-container mt-3 mb-3">
+          <div class="prize-detail mt-2 mx-3">
+            <h4>{{event.prize}} €</h4>
+            <small>Not last minute surprise.</small>
+          </div>
         <div>
           {{#isJoin event.id currentUser}}
             <form method="post" action="/events/{{event.id}}/join">
-              <button type="submit" class="btn btn-outline-warning mt-3 mb-3 mx-2">
+              <button type="submit" class="btn-hover color-8 mt-3 mb-3 mx-2">
                 {{#isPublic event}}
                   JOIN
                 {{else}}
@@ -46,8 +56,20 @@
           {{/isJoin}}
         </div>
       </div>
-     <iframe style="border-radius:12px" src="{{event.song}}" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <div id="map"></div>
+      </div>
+      <div class="event-information mb-3">
+        <h3>Description</h3>
+        <h5>{{event.description}}</h5>
+      </div>
+      <div class="event-song">
+          <h5 class="mt-5">Listen to {{event.name}} last hit on Spotify</h5>
+          <iframe class="mt-4 mb-4" style="border-radius:12px" src="{{event.song}}" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+      <div class="map-dir mb-2">
+        <a href="https://www.google.com/maps?q={{event.lat}},{{event.lng}}" class="maps-dir">DIRECTIONS</a>
+      </div>
+      <div id="map">
+      </div>
       <script>
 
 
@@ -74,9 +96,4 @@
       </script>
     </div>
   </div>
-</div>
-<div>
-  {{#each event.users as |user|}}
-    <img src="{{user.avatar}}" alt="{{user.username}}" />
-  {{/each}}
 </div>

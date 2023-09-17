@@ -62,6 +62,52 @@
         "description": "A limited number of tables are available. To make a reservation please email reservations@avant-gardner.com. ",
         "poster": "https://dice-media.imgix.net/attachments/2023-08-22/aebe297b-32b3-4858-bbf7-f38933e3e743.jpg?rect=0%2C0%2C1080%2C1080&auto=format%2Ccompress&q=40&w=328&fit=max&dpr=2"
   
+    },
+    {
+        "name": "DOM WHITING",
+        "artist":"Dom Whiting",
+        "date": "2023-10-21",
+        "hour": "23:00",
+        "capacity": 300,
+        "public":false,
+        "prize": 14,
+        "lat": 53.344948210779776,
+        "lng": -6.264324161334011,
+        "address": "curve street",
+        "song":"https://open.spotify.com/embed/track/6AoG52kxfptY0QBQnjuQOe?utm_source=generator&theme=0",
+        "description": "Following his sold-out show with us in 2022 and a busy year of Drum & Bass On The Bike, Dom Whiting returns to Dublin to bring DNB back to Centre Point! 🇮🇪",
+        "poster": "https://dice-media.imgix.net/attachments/2023-09-11/052cc4f8-8482-4d25-9c56-0c914052a8b0.jpg?rect=10%2C639%2C1267%2C1264&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+    },
+    {
+        "name": "PING PONG DISCO",
+        "artist":"Curfew",
+        "date": "2024-09-19",
+        "hour": "23:00",
+        "capacity": 100,
+        "public": true,
+        "prize": 0,
+        "lat": 53.344948210779776,
+        "lng": -6.264324161334011,
+        "address": "curve street",
+        "song":"https://open.spotify.com/embed/track/6AoG52kxfptY0QBQnjuQOe?utm_source=generator&theme=0",
+        "description": "Let's bring some high-level vibes, and get all up on this dance floor, no one does a party like a Ping Pong Party!",
+        "poster": "https://dice-media.imgix.net/attachments/2023-08-16/eb7e9a62-4db2-4a5e-a61c-ed2cc7f74ce9.jpg?rect=0%2C638%2C4961%2C4961&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+    },
+    {
+        "name": "Concierto MDA",
+        "artist":"MDA",
+        "date": "2024-09-02",
+        "hour": "20:30",
+        "capacity": 300,
+        "public":false,
+        "prize": 15,
+        "lat": 40.42723978551218, 
+        "lng": -3.6997315942523437,
+        "address": "C. de Barceló, 11, Local B, 28004 Madrid",
+        "description": "^^7^ ii : Lª tendenciª. Para mayores de 16 años (necesario traer DNI).Organizado por @cero.en.conducta.Sin requisitos de Covid-19 para ingresar",
+        "song": "https://open.spotify.com/embed/track/3nF4lXOd7muKDoU4VFjhuK?utm_source=generator",
+        "poster": "https://dice-media.imgix.net/attachments/2023-05-22/3fed091b-4e72-4de7-9340-3a10d612ca0a.jpg?rect=0%2C440%2C3517%2C3517&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+
     }
 
     ]

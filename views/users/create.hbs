@@ -1,15 +1,16 @@
 <div class="container">
 <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 25rem;">
   <div class="card-header" style="text-align: center;">
-    <h1>Register</h1>
+    <h1>REGISTER</h1>
+    <h3>Discover the best parties in your city.</h3>
   </div>
 
   <div class="card-body">
     <form action="/create" method="post">
     
     {{! NAME }}
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
             <input type="text" name="name" class="form-control {{#if errors.name}}is-invalid{{/if}}" placeholder="Name" aria-label="Name" value="{{ user.name }}">
             {{! to show the invalid message in red }}
@@ -17,7 +18,7 @@
         </div>
 
    {{! EMAIL }}    
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
             <input type="email" name="mail" class="form-control {{#if errors.mail}}is-invalid{{/if}}" placeholder="Email" value="{{ user.mail }}">
             {{! to show invalid message in red }}
@@ -26,7 +27,7 @@
    
 
     {{! USERNAME }}
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-tag"></i></span>
             <input type="text" name="username" class="form-control {{#if errors.username}}is-invalid{{/if}}" placeholder="Username" value="{{ user.username }}">
             {{! to show invalid message in red }}
@@ -34,7 +35,7 @@
         </div>  
 
      {{! BIRTHDAY }}    
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
             <input type="date" name="birthday" class="form-control {{#if errors.birthday}}is-invalid{{/if}}" placeholder="Date of Birth" value="{{ user.birthday }}">
             {{! to show invalid message in red }}
@@ -42,16 +43,20 @@
         </div>      
     
     {{! PASSWORD }}    
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
             <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" >  {{!he quitado el value porque sino se autocompletaba la contraseña }}
             {{! to show invalid message in red }}
             {{#if errors.password}}<div class="invalid-feedback">{{ errors.password }}</div>{{/if}}
         </div>   
+
+        <div>
+            <h6>By signing up, you agree to our Terms of Use and Privacy Policy.</h6>
+        </div>
     </div>
 
     {{! ADD REGISTER BUTTON}}
-    <button type="submit" class="btn btn btn-hover color-8  mt-3 mb-4 mx-2">Submit</button>
+    <button type="submit" class="btn btn btn-hover color-8  mt-3 mb-4 mx-2">SUBMIT</button>
 
     </form>
   </div>

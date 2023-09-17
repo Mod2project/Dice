@@ -3,14 +3,14 @@
 <div class="card" style="width: 18rem;">
     <div class="class-header" style="text-align: center;">
        
-        <h1>Log in</h1>
+        <h1>LOG IN</h1>
     </div>
 
     <div class="class-body">
         <form action="/login" method="post">
 
         {{! USERNAME }}
-         <div class="input-group mb-1">
+         <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-tag"></i></span>
             <input type="text" name="username" class="form-control {{#if errors.username}}is-invalid{{/if}}" placeholder="Username" value="{{ user.username }}">
             {{! to show invalid message in red }}
@@ -18,7 +18,7 @@
         </div> 
 
         {{! PASSWORD }}    
-        <div class="input-group mb-1">
+        <div class="input-group mb-2">
             <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
             <input type="password" name="password" class="form-control {{#if errors.password}}is-invalid{{/if}}" placeholder="Password" value="{{ user.password }}">
             {{! to show invalid message in red }}
@@ -26,7 +26,7 @@
         </div>  
 
         {{! ADD LOG IN BUTTON}}
-        <button type="submit" class="btn btn-hover color-8 mt-3 mb-3 mx-2">Log in</button>
+        <button type="submit" class="btn btn-hover color-8 mt-3 mb-3 mx-2">LOG IN</button>
 
         </form>
     </div>
