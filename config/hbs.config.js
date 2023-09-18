@@ -35,3 +35,10 @@ function initMap(lat, lng) {
     zoom: 8
   });
 }
+
+hbs.registerHelper('isAdmin', function(user) {
+  if (user && user.isAdmin) {
+    return true;
+  }
+  return false;
+});

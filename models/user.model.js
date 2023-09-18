@@ -59,7 +59,7 @@ const userSchema = new Schema ({
         type : String
         //coordenadas
     },
-    admin : {
+    isAdmin : {
         type : Boolean,
         default: false
 },
