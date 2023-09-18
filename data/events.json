@@ -1,6 +1,6 @@
 [
     {
-        "name": "Concierto MDA",
+        "name": "CONCIERTO MDA",
         "artist":"MDA",
         "date": "2024-09-02",
         "hour": "20:30",
@@ -16,7 +16,7 @@
 
     },
     {
-        "name": "Lagrima",
+        "name": "LAGRIMA",
         "artist":"jiulia v2v iosa",
         "date": "2024-09-04",
         "hour": "23:30",
@@ -32,7 +32,7 @@
   
     },
     {
-        "name": "Jungle",
+        "name": "JUNGLE",
         "artist":"Jungle",
         "date": "2024-09-01",
         "hour": "19:45",
@@ -94,19 +94,67 @@
         "poster": "https://dice-media.imgix.net/attachments/2023-08-16/eb7e9a62-4db2-4a5e-a61c-ed2cc7f74ce9.jpg?rect=0%2C638%2C4961%2C4961&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
     },
     {
-        "name": "Concierto MDA",
-        "artist":"MDA",
-        "date": "2024-09-02",
+        "name": "ONE MAN IN THE CITY",
+        "artist":"Marc Antonio",
+        "date": "2023-10-02",
+        "hour": "21:30",
+        "capacity": 200,
+        "public": true,
+        "prize": 0,
+        "lat": 53.31760956426946,  
+        "lng": -6.265114027640351,
+        "address": "Rathmines Road",
+        "description": "Mark has always drawn on his eclectic tastes to transmit a range of different feelings. Don't miss his live debut in Dublin this October!",
+        "song": "https://open.spotify.com/intl-es/track/7wWmC06ddcnPaJgKGtuNhP?si=b0600ab970a54b7b",
+        "poster": "https://dice-media.imgix.net/attachments/2023-06-06/c561b949-99ee-4c83-a4ae-baf1f7afa957.jpg?rect=521%2C0%2C2048%2C2048&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+
+    },
+    {
+        "name": "MCDE",
+        "artist":"Dani Slow",
+        "date": "2023-09-23",
         "hour": "20:30",
-        "capacity": 300,
-        "public":false,
-        "prize": 15,
-        "lat": 40.42723978551218, 
-        "lng": -3.6997315942523437,
-        "address": "C. de Barceló, 11, Local B, 28004 Madrid",
-        "description": "^^7^ ii : Lª tendenciª. Para mayores de 16 años (necesario traer DNI).Organizado por @cero.en.conducta.Sin requisitos de Covid-19 para ingresar",
-        "song": "https://open.spotify.com/embed/track/3nF4lXOd7muKDoU4VFjhuK?utm_source=generator",
-        "poster": "https://dice-media.imgix.net/attachments/2023-05-22/3fed091b-4e72-4de7-9340-3a10d612ca0a.jpg?rect=0%2C440%2C3517%2C3517&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+        "capacity": 500,
+        "public": false,
+        "prize": 50,
+        "lat": 53.29187105726331,   
+        "lng": -6.20630655396004,
+        "address": "Stillorgan Road",
+        "description": "MCDE is regarded as an influential DJ and producer, renowned for his excellent knowledge in music as well as his technical wizardry behind the turntables!",
+        "song": "https://open.spotify.com/intl-es/track/4QaNevdY8gjGHXzcx7yL4U?si=0461aba3b4dc42cd",
+        "poster": "https://dice-media.imgix.net/attachments/2023-09-07/1388a11f-0c52-4d82-a17c-3b100ecaadda.jpg?rect=0%2C551%2C946%2C946&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+
+    },
+    {
+        "name": "LETS DANCE",
+        "artist":"Wanda Vts",
+        "date": "2023-11-02",
+        "hour": "20:00",
+        "capacity": 500,
+        "public": false,
+        "prize": 25,
+        "lat": 53.34705433747257,    
+        "lng": -6.263333200569847,
+        "address": "Liffey Street",
+        "description": "We're delighted to bring LETS DANCE back to Dublin for an intimate live performance at The Grand Social.",
+        "song": "https://open.spotify.com/intl-es/track/1qqbDfljuA35Jrt9H5wNKj?si=46b58d0abde74db6",
+        "poster": "https://dice-media.imgix.net/attachments/2023-09-12/0d715b0b-baf4-4c1c-9ff2-769c1d9c8c8f.jpg?rect=0%2C30%2C2400%2C2400&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
+
+    },
+    {
+        "name": "LISTENING PARTY",
+        "artist":"Isn't it now?",
+        "date": "2023-12-21",
+        "hour": "20:45",
+        "capacity": 1000,
+        "public": true,
+        "prize": 0,
+        "lat": 53.290628948149845,    
+        "lng": -6.149096055526632,
+        "address": "West Hollywood",
+        "description": "Isn’t It Now? absolutely lands as a classic, its mix of playfulness and earnestness, glittery pop and tessellated textures seeming to synthesize and update all that has ever made and still makes this band so compelling.",
+        "song": "https://open.spotify.com/intl-es/track/5cOaDhLJ6dGnIMAFeHsjT5?si=97796b458b90479e",
+        "poster": "https://dice-media.imgix.net/attachments/2023-09-12/fd575a91-3b29-40f5-804d-1f633d38212e.jpg?rect=0%2C0%2C1000%2C1000&auto=format%2Ccompress&q=80&w=328&fit=max&dpr=1"
 
     }
 

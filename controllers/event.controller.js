@@ -35,7 +35,16 @@ module.exports.list = (req, res, next) => {
 }
 
 module.exports.detail = (req, res, next) => {
-  res.render("events/detail", { event: req.event });
+  let usersInEvent = []
+  Ticket.find({event: req.params.id})
+  .populate("user")
+  .then((tickets) => {
+     usersInEvent = tickets.map((ticket) => {
+      return ticket.user
+     })
+     console.log(usersInEvent)
+  res.render("events/detail", { event: req.event, usersInEvent });
+  })
 }
 
 module.exports.edit = (req, res, next) => {
