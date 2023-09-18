@@ -1,17 +1,35 @@
-<div class="row justify-content-center pt-3 ps-5 pe-5 ">
-  
+<div class="row justify-content-center pt-3 ps-5 pe-5">
+
   {{#each events as |event|}}
     <div class="col-12 col-md-3 mb-2">
       <div class="card">
-        <img src="{{event.poster}}" class="img-list" alt="avatar-photo">
+        <img src="{{event.poster}}" class="img-list" alt="avatar-photo" />
         <div class="card-body">
           <h3 class="card-title">{{event.name}}</h3>
           <h6 class="card-text-artist">{{event.artist}}</h6>
           <p class="card-text-date">{{prettyDate event.date}}</p>
-          <a href="/events/{{event._id}}" class="btn btn-hover color-8">Detail</a>
+          <a
+            href="/events/{{event._id}}"
+            class="btn btn-hover color-8"
+          >Detail</a>
         </div>
       </div>
-       
     </div>
   {{/each}}
+  
+  {{#if (isAdmin currentUser)}}
+  <div class="col-12 col-md-3 mb-2">
+    <div class="card">
+      <img
+        src="https://cdn.pixabay.com/photo/2018/11/13/22/01/instagram-3814084_1280.png"
+        class="img-list-new"
+        alt="avatar-photo"/>
+      <h3><a class="card-nav-link {{navActive navigationPath '/events/create'}}"
+        aria-current="page"
+        href="/events/create"
+      >CREATE NEW EVENT</a></h3>
+    </div>
+  </div>
+  {{/if}}
+
 </div>

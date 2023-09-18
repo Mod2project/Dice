@@ -4,7 +4,7 @@
       <img src="{{event.poster}}" class="card-img-top-detail" alt="{{event.name}}">
       <div class="card-body">
         <div class="button-card">
-          {{#if currentUser}}
+          {{#if (isAdmin currentUser)}}
           <div>
             <form method="post" action="/events/{{event.id}}/delete">
               <button type="submit" class="btn btn-ouline-light color-8 mx-1 mb-3" href="">DELETE</button>
@@ -19,7 +19,7 @@
         </div>
         {{/if}}
         <div>
-          {{#each event.users as |user|}}
+          {{#each usersInEvent as |user|}}
              <img src="{{user.avatar}}" alt="{{user.username}}" class="users-avatar" />
           {{/each}}
         </div>

@@ -64,6 +64,15 @@ html, body {
    display: inline-block;
  }
 
+ .img-list-new {
+  opacity: 0.6;
+ }
+
+.card-nav-link{
+  color: antiquewhite;
+  text-decoration: none;
+}
+
  .card-image-top {
    border-radius: 20px;
  }
@@ -129,6 +138,10 @@ html, body {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 15px;
+}
+
+.event-header {
+  color: antiquewhite;
 }
 
 .profile-avatar{
