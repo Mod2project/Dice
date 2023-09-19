@@ -295,5 +295,31 @@ html, body {
 }
 
 
+.spoty {
+  padding-top: 20px;
+}
 
+.btn-no-admin{
+  color: #000000;
+}
 
+.left-row {
+  padding-top: 80px;
+
+}
+
+.attendant-avatar{
+padding-top: 20px;
+}
+
+.btn-admin {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+image-card-body{
+  display: flex;
+  flex-direction: column;
+  
+}
